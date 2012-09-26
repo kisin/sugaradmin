@@ -31,4 +31,13 @@ Sugaradmin::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   config.action_mailer.delivery_method = :letter_opener
+
+
+  #didnt manage running foreman on local machine (development) so i hardcoded the enviroment variables
+  ENV['S3_BUCKET_NAME'] = 'mysugar-uploads-development'
+  ENV['AWS_ACCESS_KEY_ID'] = 'AKIAIQPQIW7MTKYA5MVA'
+  ENV['AWS_SECRET_ACCESS_KEY'] = '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'
+  ENV['FOG_PROVIDER'] = 'AWS'
+  ENV['FOG_DIRECTORY'] = 'mysugar-assets'
+  
 end

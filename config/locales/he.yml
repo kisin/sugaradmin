@@ -1,5 +1,16 @@
 he:
+  time:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d ב%B %H:%M"
+      long: "%d/%m/%Y %H:%M:%S"
+    am: "am"
+    pm: "pm"
   active_admin:
+    messages: "הודעות"
+    admins: "מנהלים"
+    recent_messages: "הודעות אחרונות"
+    recent_users: "משתמשים חדשים"
     dashboard: פנל ניהול
     dashboard_welcome:
       welcome: "ברוכים הבאים לאקטיב אדמין. זהו פנל הניהול"

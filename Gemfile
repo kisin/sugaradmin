@@ -4,6 +4,8 @@ gem 'rails', '3.1.1'
 gem 'jquery-rails'
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
+gem 'paperclip'
+gem 'aws-sdk'
 
 
 group :production do
@@ -15,6 +17,7 @@ end
 group :development do
 	gem 'sqlite3'
 	gem 'letter_opener'
+	gem 'rack-mini-profiler'
 end
 
 

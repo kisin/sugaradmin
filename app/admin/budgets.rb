@@ -6,5 +6,7 @@ ActiveAdmin.register Budget do
 		column :title
 
 		default_actions
-	end  
+	end
+
+	filter :title
 end

@@ -1,0 +1,134 @@
+body.active_admin
+{	
+	direction:rtl;
+
+	.table_links
+	{
+		li
+		{
+			margin-bottom:10px;
+		}
+	}
+
+	#header
+	{
+		ul
+		{
+			direction:ltr;
+		}
+	}
+
+	#title_bar
+	{
+		direction:ltr;
+	}
+
+	caption, th, td
+	{
+		text-align:right;
+	}
+
+	.blank_container
+	{
+		margin-bottom:40px;
+	}
+
+
+	.table_action_items a {
+		-webkit-border-radius: 200px;
+		-moz-border-radius: 200px;
+		border-radius: 200px;
+		display: inline-block;
+		font-weight: bold;
+		font-size: 1.0em;
+		font-family: Helvetica, Arial, sans-serif;
+		line-height: 12px;
+		margin-right: 3px;
+		padding: 7px 16px 6px;
+		text-decoration: none;
+		-webkit-font-smoothing: antialiased;
+		background: white;
+		background: -webkit-gradient(linear, left top, left bottom, from(white), to(#e7e7e7));
+		background: -moz-linear-gradient(-90deg, white, #e7e7e7);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='#e7e7e7');
+		-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='#e7e7e7');
+		-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 0 rgba(255, 255, 255, 0.8) inset;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 0 rgba(255, 255, 255, 0.8) inset;
+		border: solid 1px #c7c7c7;
+		border-color: #c7c7c7;
+		border-top-color: lightgrey;
+		border-right-color: #c7c7c7;
+		border-bottom-color: #c2c2c2;
+		border-left-color: #c7c7c7;
+		text-shadow: white 0 1px 0;
+		color: #5e6469;
+		padding: 12px 17px 10px;
+		margin: 0px;
+	}
+
+	.box-actions
+	{
+		list-style-type:none;
+		overflow:hidden;
+
+		li
+		{
+			float:right;
+
+			a 
+			{
+				margin:0 12px 12px 12px;
+				display:block;
+				width:100px;
+				height:100px;
+				text-align:center;
+				background-color:#EBEEF1;
+				color:#9AB;
+				border-right:5px solid #ACD1FD;
+				text-decoration:none;
+
+				&:hover
+				{
+					text-decoration:none;
+					background-color:#DBE0E6;
+				}
+
+				&.disabled
+				{
+					color:#ccc;
+					border-right-color:#EBEEF1;
+				}
+
+				&.disabled:hover
+				{
+					background-color:#EBEEF1;
+				}
+
+				strong
+				{
+					display:block;
+					font-size:50px;
+					line-height:50px;
+					font-weight:bold;
+					padding:12px 0 10px 0;
+					direction:ltr;
+				}
+
+				small
+				{
+					display:block;
+					line-height:14px;
+				}
+
+				p
+				{
+					font-size:20px;
+					line-height:20px;
+					padding:20px 0 10px 0;
+				}
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,11 @@
+<ul class="table_links">
+	<% messages.each do |message| %>
+		<li>
+			<%= link_to truncate_words(message.content, 10), admin_message_path(message) %>
+		</li>
+	<% end %>
+</ul>
+
+<div class="table_action_items">
+	<%= link_to "לחץ לצפייה בכל ההודעות", admin_messages_path %>
+</div>

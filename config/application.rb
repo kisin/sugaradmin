@@ -27,11 +27,11 @@ module Sugaradmin
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Jerusalem'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.default_locale = :he
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -46,5 +46,7 @@ module Sugaradmin
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = false
+
+    config.active_support.deprecation = :notify
   end
 end

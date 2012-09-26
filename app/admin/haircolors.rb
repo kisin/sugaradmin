@@ -1,5 +1,6 @@
 ActiveAdmin.register Haircolor do
 	menu false
+	config.sort_order = "title_asc"
 
 	index do
 		column :id
@@ -7,4 +8,6 @@ ActiveAdmin.register Haircolor do
 
 		default_actions
 	end
+
+	filter :title
 end

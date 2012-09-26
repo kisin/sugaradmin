@@ -1,0 +1,23 @@
+<div>
+	<ul class="box-actions">
+		<li>
+			<%= link_to raw("<strong>#{count[:users]}</strong><small>משתמשים</small>"), admin_users_path %>
+		</li>
+		<li>
+			<%= link_to raw("<strong>#{count[:users_payed]}</strong><small>משתמשים ששילמו</small>"), "#" %>
+		</li>
+		<li>
+			<%= link_to raw("<strong>#{count[:messages]}</strong><small>הודעות</small>"), admin_messages_path %>
+		</li>
+		<li>
+			<%= link_to raw("<strong>#{count[:winks]}</strong><small>קריצות</small>"), "#" %>
+		</li>
+		<li>
+			<%= link_to raw("<strong>#{count[:assets]}</strong><small>תמונות</small>"), "#" %>
+		</li>
+		<li>
+			<%= link_to raw("<strong>#{count[:blocks]}</strong><small>חסימות</small>"), "#" %>
+		</li>
+
+	</ul>
+</div>

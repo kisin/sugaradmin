@@ -2,7 +2,18 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  time:
+    formats:
+      default: "%a, ה־%d ב%b %Y %H:%M:%S"
+      short: "%d ב%B %H:%M"
+      long: "%d ב%B, %Y %H:%M"
+    am: "am"
+    pm: "pm"
   active_admin:
+    messages: "messages"
+    admins: "Administrators"
+    recent_messages: "Last messages"
+    recent_users: "Newest users"
     dashboard: Dashboard
     dashboard_welcome:
       welcome: "Welcome to Active Admin. This is the default dashboard page."
