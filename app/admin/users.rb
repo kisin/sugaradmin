@@ -3,6 +3,8 @@
 ActiveAdmin.register User do
 	menu :priority => 3, :label => "משתמשים"
 
+	actions :all, :except => [:destroy]
+
 	index do
 		column :id do |user|
 			link_to user.id, admin_user_path(user)
@@ -50,6 +52,9 @@ ActiveAdmin.register User do
 	end
 
 
-	action_item :only => :show do
+	action_item :only => [:show] do
+		link_to "bbb"
 	end
+
+	collection_action :some_collection
 end

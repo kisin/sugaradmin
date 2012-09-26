@@ -50,7 +50,7 @@ he:
       entry:
         one: "רשומה בודדה"
         other: "רשומות"
-    any: "Any"
+    any: "כל האפשרויות"
     blank_slate:
       content: "כרגע אין עוד אף %{resource_name}."
       link: "צור אחד"

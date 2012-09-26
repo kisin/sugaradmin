@@ -6,6 +6,7 @@ gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'asset_sync'
 
 
 group :production do

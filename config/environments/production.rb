@@ -1,6 +1,12 @@
 Sugaradmin::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # lock production admin site behind password
+  config.middleware.insert_after(::Rack::Lock, "::Rack::Auth::Basic", "production") do |u, p|
+    [u, p] == [ENV['AUTH_USERNAME'], ENV['AUTH_SECRET']]
+  end
+
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
