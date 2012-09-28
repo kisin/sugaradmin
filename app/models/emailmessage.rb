@@ -3,7 +3,7 @@ class Emailmessage
 	include ActiveModel::Conversion
 	include ActiveModel::Naming
 
-	attr_accessor :subject, :body, :name
+	attr_accessor :subject, :body, :name, :email
 
 	validates :subject, :body, :presence => true
 

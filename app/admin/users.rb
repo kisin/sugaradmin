@@ -82,7 +82,7 @@ ActiveAdmin.register User do
 
 	member_action :sendemail, :method => :post do
 		user = User.find(params[:id])
-		emailmessage = Emailmessage.new(params[:emailmessage].merge({:name => user.profile.displayname}))
+		emailmessage = Emailmessage.new(params[:emailmessage].merge({:email => user.email, :name => user.profile.displayname}))
 
 		if emailmessage.valid?
 			UserMailer.new_message(emailmessage).deliver

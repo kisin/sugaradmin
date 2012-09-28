@@ -3,6 +3,6 @@ class UserMailer < ActionMailer::Base
 
 	def new_message(message)
 		@message = message
-		mail(:subject => @message.subject)
+		mail(:to => @message.email, :subject => @message.subject)
 	end
 end

@@ -39,7 +39,7 @@ a:link {color: #00a0c6;}
 	</tr>
 	<tr>
 		<td style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 300; color: #00a0c6; line-height: 26px; padding-bottom: 18px;">
-			<%= @message.body %>
+			<%= simple_format(@message.body) %>
 		</td>
 	</tr>
 	<tr>
