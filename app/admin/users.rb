@@ -61,6 +61,10 @@ ActiveAdmin.register User do
 		end
 	end
 
+	action_item :only => [:show] do
+		link_to "שלח דואר אלקטרוני", email_admin_user_path(user)
+	end
+
 	member_action :ban, :method => :post do
 		user = User.find(params[:id])
       	user.ban!
@@ -71,6 +75,21 @@ ActiveAdmin.register User do
 		user = User.find(params[:id])
       	user.unban!
       	redirect_to admin_user_path(user)
+	end
+
+	member_action :email, :method => :get do
+	end
+
+	member_action :sendemail, :method => :post do
+		user = User.find(params[:id])
+		emailmessage = Emailmessage.new(params[:emailmessage].merge({:name => user.profile.displayname}))
+
+		if emailmessage.valid?
+			UserMailer.new_message(emailmessage).deliver
+			redirect_to admin_user_path(user), :notice => "ההודעה נשלחה למשתמש"
+		else
+			redirect_to email_admin_user_path(user), :notice => "אחד מהפרטים בטופס חסר. מלא את כל פרטי הטופס על מנת לשלוח אותו"
+		end
 	end
 
 end

@@ -82,7 +82,25 @@ body.active_admin
 				padding:10px;
 			}
 		}
+	}
 
+	form
+	{
+		.form-row
+		{
+			margin-bottom:18px;
+
+			label
+			{
+				display:block;
+				font-weight:bold;
+			}
+		}
+
+		.form-footer
+		{
+			margin:10px;
+		}
 	}
 
 	.box-actions

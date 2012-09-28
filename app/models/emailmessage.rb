@@ -1,21 +1,20 @@
 class Emailmessage
-  include ActiveModel::Validations
-  include ActiveModel::Conversion
-  include ActiveModel::Naming
+	include ActiveModel::Validations
+	include ActiveModel::Conversion
+	include ActiveModel::Naming
 
-  attr_accessor :name, :email, :subject, :body
+	attr_accessor :subject, :body, :name
 
-  validates :email, :body, :presence => true
-  validates :email, :format => { :with => %r{.+@.+\..+} }, :allow_blank => true
+	validates :subject, :body, :presence => true
 
-  def initialize(attributes = {})
-    attributes.each do |name, value|
-      send("#{name}=", value)
-    end
-  end
+	def initialize(attributes = {})
+		attributes.each do |name, value|
+			send("#{name}=", value)
+		end
+	end
 
-  def persisted?
-    false
-  end
+	def persisted?
+		false
+	end
   
 end

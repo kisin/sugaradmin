@@ -1,0 +1,13 @@
+<%= form_for :emailmessage, :url => sendemail_admin_user_path do |f| %>
+	<p class="form-row">
+		<%= f.label :subject, "כותרת" %>
+		<%= f.text_field :subject %>
+	</p>
+	<p class="form-row">
+		<%= f.label :body, "תוכן ההודעה" %>
+		<%= f.text_area :body %>
+	</p>
+	<p class="form-footer">
+		<%= f.submit "שלח דואר", :class => "btn btn-primary btn-large" %>
+	</p>
+<% end %>
