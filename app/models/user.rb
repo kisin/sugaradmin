@@ -56,6 +56,19 @@ class User < ActiveRecord::Base
 		false
 	end
 
+	def banned?
+		return true if !locked_at.nil?
+		false
+	end
+
+	def ban!
+		self.update_attribute(:locked_at, Time.now)
+	end
+
+	def unban!
+		self.update_attribute(:locked_at, nil)
+	end
+
 	def is_payed?
 		return true unless ((payed.nil? || payed == 0) && type.price>0)
 		false

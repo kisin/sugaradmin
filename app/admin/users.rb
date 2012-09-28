@@ -34,6 +34,7 @@ ActiveAdmin.register User do
 		attributes_table do
 			row :id
 			row :created_at
+			row :locked_at
 			row :type
 			row :profile do
 				link_to p.displayname, admin_profile_path(p)
@@ -53,8 +54,23 @@ ActiveAdmin.register User do
 
 
 	action_item :only => [:show] do
-		link_to "bbb"
+		if user.locked_at.nil?
+			button_to "חסום משתמש", ban_admin_user_path(user), :method => :post
+		else
+			button_to "בטל חסימת משתמש", unban_admin_user_path(user), :method => :post
+		end
 	end
 
-	collection_action :some_collection
+	member_action :ban, :method => :post do
+		user = User.find(params[:id])
+      	user.ban!
+      	redirect_to admin_user_path(user)
+	end
+
+	member_action :unban, :method => :post do
+		user = User.find(params[:id])
+      	user.unban!
+      	redirect_to admin_user_path(user)
+	end
+
 end

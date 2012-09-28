@@ -66,6 +66,25 @@ body.active_admin
 		margin: 0px;
 	}
 
+	.action_item
+	{
+		form
+		{
+			display:inline;
+
+			div
+			{
+				display:inline;
+			}
+
+			input[type='submit']
+			{
+				padding:10px;
+			}
+		}
+
+	}
+
 	.box-actions
 	{
 		list-style-type:none;
