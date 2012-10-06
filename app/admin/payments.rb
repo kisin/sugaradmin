@@ -25,6 +25,7 @@ ActiveAdmin.register Payment do
 			row :transaction_id do
 				payment.transaction_id
 			end
+			row :params
 			row :created_at
 			row :updated_at
 		end
