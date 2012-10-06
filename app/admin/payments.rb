@@ -13,4 +13,22 @@ ActiveAdmin.register Payment do
 		column :params
 		column :created_at
 	end
+
+
+	show do |payment|
+		attributes_table do
+			row :id
+			row :status
+			row :user do
+				link_to payment.user.email, admin_user_path(payment.user)
+			end
+			row :transaction_id do
+				payment.transaction_id
+			end
+			row :created_at
+			row :updated_at
+		end
+
+		active_admin_comments
+	end
 end
