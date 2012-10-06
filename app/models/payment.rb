@@ -8,12 +8,11 @@ class Payment < ActiveRecord::Base
 private
 
 	def mark_user_as_payed
-		if status == "Completed"
+		if status == "Completed" || status == "Pending"
 			user.update_attribute(:payed, 1)
 
 			ContactMailer.money_mail.deliver
 		end
-
 	end
 
 end
