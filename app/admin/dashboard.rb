@@ -39,6 +39,7 @@ ActiveAdmin.register_page "Dashboard" do
 
 	sidebar :information_tables do
 		ul :class => "table_links" do
+			li link_to "נרשמים מוקדמים", admin_registers_path
 			li link_to "תשלומים", admin_payments_path
 			li link_to "הכנסה שנתית", admin_annualincomes_path
 			li link_to "מבנה גוף", admin_bodytypes_path
