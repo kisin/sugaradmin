@@ -12,7 +12,7 @@ class UserMailer < ActionMailer::Base
 	def create_new_user_from_register(register, pw)
 		@email = register.email
 		@pw = pw
-		@type = Type.find(@register.type_id).title
+		@type = Type.find(register.type_id).title
 
 		mail(:to => @email, :subject => "mysugar נפתח! ברוך בואך לאתר")
 	end

@@ -1,0 +1,40 @@
+# Hebrew translations for models
+
+he:
+  activerecord:
+    attributes:
+      asset:
+        item: "קובץ התמונה"
+        item_content_type: "סוג התמונה"
+        item_file_size: "גודל התמונה"
+        item_file_name: "שם התמונה"
+      user:
+        email: "כתובת דואר אלקטרוני"
+        current_password: "סיסמא נוכחית"
+        password: "סיסמא"
+        password_confirmation: "סיסמא לאישור"
+      profile:
+        nickname: "כינוי"
+        heading: "משפט ראשי"
+        height: "גובה"
+        yearofbirth: "שנת לידה"
+        bodytype: "מבנה גוף"
+        eyecolor: "צבע עיניים"
+        haircolor: "צבע שיער"
+        arrangement: "הסכם רצוי"
+        description: "כמה מילים עליי"
+        budget: "תקציב הוצאות"
+        occupation: "עיסוק"
+        annualincome: "הכנסה שנתית"
+        smokehabbit: "הרגלי עישון"
+        drinkhabbit: "הרגלי שתייה"
+        area: "איזור"
+        city: "עיר"
+        familystatus: "מצב משפחתי"
+        education: "השכלה"
+      message:
+        content: "תוכן ההודעה"
+
+      emailmessage:
+        email: "כתובת דואר אלקטרוני"
+        body: "תוכן ההודעה"
